@@ -1,0 +1,26 @@
+php bin/magento setup:install \
+--admin-firstname=Manoj \
+--admin-lastname=Malviya \
+--admin-email=manojm@girnarsoft.com \
+--admin-user=admin \
+--admin-password='1234abcd' \
+--elasticsearch-host=elasticsearch \
+--base-url=https://local.magento.com \
+--base-url-secure=https://local.magento.com \
+--backend-frontname=admin \
+--db-host=mysql \
+--db-name=magento \
+--db-user=root \
+--db-password=root \
+--use-rewrites=1 \
+--language=en_US \
+--currency=USD \
+--timezone=America/New_York \
+--use-secure-admin=1 \
+--admin-use-security-key=1 \
+--session-save=files \
+--use-sample-data
+
+
+
+php -f /app/sampledata/magento2-sample-data/dev/tools/build-sample-data.php -- --ce-source="/app"
